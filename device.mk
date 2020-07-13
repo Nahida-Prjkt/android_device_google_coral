@@ -16,8 +16,6 @@
 
 LOCAL_PATH := device/google/coral
 
-PRODUCT_VENDOR_MOVE_ENABLED := true
-
 PRODUCT_SOONG_NAMESPACES += \
     device/google/coral \
     hardware/google/interfaces \
@@ -370,9 +368,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.media.transcoding.codec_max_operating_rate_1080P=240 \
     debug.media.transcoding.codec_max_operating_rate_4k=120 \
 
-# Enable ECO service
-QC2_HAVE_ECO_SERVICE := true
-
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qc2.venc.avgqp.enable=1
 
@@ -418,8 +413,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti
 
 ENABLE_VENDOR_RIL_SERVICE := true
-
-USE_QCRIL_OEMHOOK := true
 
 HOSTAPD := hostapd
 PRODUCT_PACKAGES += $(HOSTAPD)
@@ -654,8 +647,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Do not skip init trigger by default
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     vendor.skip.init=0
-
-BOARD_USES_QCNE := true
 
 #per device
 PRODUCT_COPY_FILES += \
