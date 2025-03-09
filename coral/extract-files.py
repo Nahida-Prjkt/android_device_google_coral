@@ -53,6 +53,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('qulacomm', 'qualcomm'),
     'system_ext/priv-app/HbmSVManager/HbmSVManager.apk': blob_fixup()
         .apktool_patch('HbmSVManager.patch', '-r'),
+    'vendor/bin/color_init': blob_fixup()
+        .add_needed('libbase_shim.so'),
     (
         'vendor/bin/hw/android.hardware.rebootescrow-service.citadel',
         'vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so',
