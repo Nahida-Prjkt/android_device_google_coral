@@ -863,7 +863,7 @@ PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SM8150
 -include vendor/qcom/sm8150/proprietary/securemsm/config/keymaster_vendor_proprietary_product.mk
 
 include hardware/google/pixel/common/pixel-common-device.mk
-include hardware/google/pixel/vibrator/cs40l25/device.mk
+include device/google/coral/vibrator/cs40l25/device.mk
 include hardware/google/pixel/pixelstats/device.mk
 include hardware/google/pixel/mm/device_legacy.mk
 include device/google/gs-common/thermal/thermal_hal/device.mk
