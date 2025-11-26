@@ -409,7 +409,7 @@ PRODUCT_COPY_FILES += \
 include hardware/google/pixel/PixelLogger/PixelLogger.mk
 
 # Power
--include hardware/google/pixel/power-libperfmgr/aidl/device.mk
+include hardware/google/pixel/power-libperfmgr/aidl/device.mk
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -429,8 +429,6 @@ PRODUCT_PACKAGES += \
     RcsService
 
 # RIL
--include vendor/google/build/soong/soong_config_namespace/qcril_oemhook.mk
-
 ENABLE_VENDOR_RIL_SERVICE := true
 
 PRODUCT_PACKAGES += \
@@ -440,10 +438,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml
-
-# Security
--include vendor/qcom/sm8150/proprietary/securemsm/config/keymaster_vendor_proprietary_board.mk
--include vendor/qcom/sm8150/proprietary/securemsm/config/keymaster_vendor_proprietary_product.mk
 
 # Security Patch Levels
 BOOT_SECURITY_PATCH = 2022-10-05
